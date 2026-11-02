@@ -1,0 +1,83 @@
+/* Mobile-first enhancements for the Kinematics course site. */
+:root{--mobile-blue:#2563eb}
+html{scroll-padding-top:5.5rem}body{overflow-x:clip}img,svg,iframe{max-width:100%}main,section,.container,.subject-content{min-width:0}
+a,button{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible{outline:3px solid #2563eb;outline-offset:4px}
+.nav__toggle,.nav__close{display:grid;place-items:center;min-width:44px;min-height:44px;cursor:pointer}
+.lesson-video-frame iframe{width:100%;height:100%;border:0;display:block}
+.lesson-video-frame,.lesson-youtube-link{aspect-ratio:16/9;min-height:0}
+.lesson-video-caption,.reference-body,.reference-body a{overflow-wrap:anywhere}
+@media(max-width:767px){
+ .container{width:calc(100% - 2.25rem);max-width:100%}
+ .header{background:rgba(255,255,255,.94)}.nav{height:4.25rem}
+ .nav__logo{font-size:1.12rem;position:relative;z-index:2}
+ .nav__toggle{font-size:1.65rem;border-radius:13px;background:#eef3ff;color:#1d4ed8}
+ .nav__menu{top:0!important;left:auto!important;right:0;width:min(86vw,340px);height:100dvh;max-height:100dvh;overflow-y:auto;overscroll-behavior:contain;padding:5.6rem 1.5rem 2rem;background:#fff;border-radius:22px 0 0 22px;box-shadow:-18px 0 55px #16243d22;transform:translateX(110%);visibility:hidden;pointer-events:none;transition:transform .3s ease,visibility .3s;z-index:5;text-align:left}
+ .nav__menu.show-menu{transform:translateX(0);visibility:visible;pointer-events:auto}
+ .nav__close{position:absolute;top:1rem;right:1.25rem;background:#f1f5fb;border-radius:12px;color:#18263c}
+ .nav__list{gap:.35rem}.nav__link{display:block;padding:.95rem 1rem;border-radius:13px;font-size:1rem;font-weight:650;color:#344054}
+ .nav__link.active-link,.nav__link:hover{background:#eef4ff;color:#1d4ed8}
+ body.mobile-menu-open{overflow:hidden}
+ .mobile-menu-backdrop{position:fixed;inset:0;background:rgba(13,25,45,.38);z-index:calc(var(--z-fixed) - 1);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s,visibility .3s}
+ .mobile-menu-backdrop.is-open{opacity:1;visibility:visible;pointer-events:auto}
+ .section{padding-block:4.25rem 2.75rem;scroll-margin-top:4.75rem}
+ .subject-hero{min-height:100svh;padding:7.5rem 1.1rem 5.2rem}
+ .subject-hero__inner{width:100%}.subject-hero__title{font-size:clamp(2.65rem,11.7vw,5.1rem);letter-spacing:-.075em;line-height:1.08;margin:1.35rem 0}
+ .subject-hero__description{font-size:1rem;line-height:1.75;max-width:35ch;margin-bottom:1.7rem}
+ .eyebrow{font-size:.61rem;letter-spacing:.075em;padding:.6rem .85rem;max-width:100%;white-space:normal;justify-content:center}
+ .subject-hero .button{min-height:48px;padding:.85rem 1.2rem;font-size:.9rem}
+ .orbit-one{width:290px;height:290px;left:-180px;top:-120px}.orbit-two{width:180px;height:180px;right:-90px;bottom:-75px}
+ .scroll-hint{bottom:1.6rem;font-size:.58rem}
+ .section__title{font-size:clamp(1.9rem,7vw,2.55rem);line-height:1.18;margin-bottom:1.3rem}
+ .background-layout{grid-template-columns:minmax(0,1fr);gap:1.6rem}
+ .background-copy{font-size:1rem;line-height:1.8}
+ .concept-card{padding:1.6rem;border-radius:22px}
+ .lessons-intro{font-size:.96rem;line-height:1.75}
+ .subject-lessons .lesson-grid{grid-template-columns:minmax(0,1fr);gap:1.15rem}
+ .subject-lessons .lesson-card{padding:1rem;border-radius:21px;min-height:0}
+ .lesson-video-heading{gap:.7rem}.lesson-video-heading h3{font-size:1.05rem}
+ .lesson-video-number{width:35px;height:35px;border-radius:11px}
+ .lesson-video-frame,.lesson-video-empty{border-radius:13px}
+ .lesson-video-caption{font-size:.86rem;line-height:1.55}
+ .author-card{padding:1.5rem;gap:1.3rem;border-radius:23px}
+ .author-avatar{width:135px;height:135px}.author-info h3{font-size:1.8rem}
+ .plate-grid{grid-template-columns:minmax(0,1fr);gap:1.2rem}
+ .plate-card,.reference-card{border-radius:21px}
+ .plate-card__info{padding:1.15rem;gap:.5rem}.plate-card__info h3{font-size:1.15rem}
+ .plate-image{aspect-ratio:4/3}.plate-photo-link .plate-placeholder{min-height:190px}
+ .reference-card{padding:1.15rem;gap:.9rem;align-items:flex-start}
+ .reference-icon{flex:0 0 43px;height:43px;border-radius:13px;font-size:1.3rem}
+ .reference-body{min-width:0}.reference-card h2{font-size:1rem;line-height:1.5}
+ .reference-index{display:none}.reference-note{font-size:.92rem}
+ .subject-footer{padding:1.8rem 0;gap:.5rem;font-size:.86rem}
+ .scrollup.show-scroll{right:1rem;bottom:1rem;border-radius:14px;box-shadow:0 8px 24px #1d4ed833}
+ .js-reveal .reveal-item{transition-duration:.55s;transform:translateY(16px)}
+}
+@media(max-width:360px){.container{width:calc(100% - 1.75rem)}.subject-hero__title{font-size:clamp(2.25rem,11.5vw,3rem)}.eyebrow{font-size:.55rem}.plate-card__info{flex-wrap:wrap}}
+@media(min-width:768px) and (max-width:1100px){.nav__list{gap:.65rem}.nav__link{font-size:.75rem}.nav__logo{font-size:1rem}.container{width:calc(100% - 3rem)}}
+@media(hover:none){.lesson-card:hover,.plate-card:hover,.reference-card:hover,.concept-card:hover{transform:none}.button:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){.nav__menu,.mobile-menu-backdrop{transition:none!important}.js-reveal .reveal-item{opacity:1!important;transform:none!important}}
+/* Fix desktop navigation */
+@media (min-width: 768px) {
+  .nav__toggle,
+  .nav__close {
+    display: none !important;
+  }
+
+  .nav__menu {
+    position: static;
+    transform: none;
+    visibility: visible;
+    pointer-events: auto;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    width: auto;
+    height: auto;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}

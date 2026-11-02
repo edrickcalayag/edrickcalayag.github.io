@@ -1,0 +1,416 @@
+/* Additional pages: modern white design */
+.page-hero {
+    padding-top: 11rem;
+    padding-bottom: 5rem;
+    background: radial-gradient(ellipse at 50% 30%, #edf3ff 0%, #f8fbff 55%, #fff 100%)
+}
+
+.page-title {
+    font-size: clamp(3.7rem, 8vw, 7rem);
+    letter-spacing: -.075em;
+    line-height: 1.1;
+    color: #101828;
+    margin: 1rem 0 1.3rem
+}
+
+.page-title span {
+    color: #2563eb
+}
+
+.page-lead {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    max-width: 650px;
+    line-height: 1.85;
+    color: #667085
+}
+
+.page-stat {
+    display: inline-flex;
+    gap: .6rem;
+    align-items: center;
+    margin-top: 2rem;
+    background: white;
+    border: 1px solid #e8edf5;
+    border-radius: 999px;
+    padding: .7rem 1.2rem;
+    font-size: .84rem;
+    color: #475467;
+    box-shadow: 0 10px 30px #1827440c
+}
+
+.page-stat i {
+    font-size: 1.2rem;
+    color: #2563eb
+}
+
+.plate-section,
+.reference-section {
+    background: #f7f9fd
+}
+
+.plate-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.6rem
+}
+
+.plate-card,
+.reference-card {
+    background: #fff;
+    border: 1px solid #e8edf5;
+    border-radius: 28px;
+    box-shadow: 0 15px 40px #1827440b;
+    overflow: hidden;
+    transition: transform .35s, box-shadow .35s, border-color .35s
+}
+
+.plate-card:hover,
+.reference-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 28px 55px #1827441a;
+    border-color: #c7d9ff
+}
+
+.plate-image {
+    aspect-ratio: 4/3;
+    background: linear-gradient(145deg, #edf3ff, #f9fbff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden
+}
+
+.plate-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform .45s
+}
+
+.plate-card:hover .plate-image img {
+    transform: scale(1.035)
+}
+
+.plate-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .6rem;
+    color: #667085
+}
+
+.plate-placeholder i {
+    font-size: 3rem;
+    color: #8cb0f5
+}
+
+.plate-placeholder span {
+    font-size: 1.25rem;
+    letter-spacing: .14em;
+    font-weight: 800;
+    color: #344054
+}
+
+.plate-placeholder small {
+    font-size: .83rem
+}
+
+.plate-card__info {
+    padding: 1.65rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem
+}
+
+.plate-card__info h2,
+.reference-card h2 {
+    font-size: 1.4rem;
+    color: #101828;
+    margin: .45rem 0
+}
+
+.plate-card__info p,
+.reference-card p {
+    font-size: .92rem;
+    line-height: 1.7;
+    color: #667085
+}
+
+.plate-count,
+.reference-index {
+    font-size: .75rem;
+    color: #98a2b3;
+    font-weight: 800;
+    white-space: nowrap
+}
+
+.reference-list {
+    display: grid;
+    gap: 1.2rem
+}
+
+.reference-card {
+    padding: 1.7rem;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem
+}
+
+.reference-icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 64px;
+    height: 64px;
+    border-radius: 19px;
+    background: #edf3ff;
+    color: #2563eb;
+    font-size: 1.75rem
+}
+
+.reference-body {
+    flex: 1
+}
+
+.reference-note {
+    padding: 1rem 1.25rem;
+    border-radius: 18px;
+    background: #edf3ff;
+    color: #475467;
+    line-height: 1.7;
+    margin-bottom: 1.6rem
+}
+
+.reference-note i {
+    color: #2563eb;
+    margin-right: .5rem
+}
+
+.page-bottom {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.3rem;
+    color: #667085
+}
+
+.nav__list {
+    gap: 1.1rem
+}
+
+.nav__link {
+    font-size: .82rem
+}
+
+.js-reveal .reveal-item {
+    transition-duration: .85s
+}
+
+@media(max-width:760px) {
+    .plate-grid {
+        grid-template-columns: 1fr
+    }
+
+    .page-hero {
+        padding-top: 9rem
+    }
+
+    .page-bottom {
+        flex-direction: column;
+        align-items: flex-start
+    }
+}
+
+@media(max-width:480px) {
+    .reference-card {
+        align-items: flex-start;
+        gap: .8rem;
+        padding: 1.1rem
+    }
+
+    .reference-icon {
+        flex-basis: 46px;
+        height: 46px;
+        font-size: 1.3rem
+    }
+
+    .reference-card h2 {
+        font-size: 1.15rem
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    .plate-card,
+    .reference-card,
+    .plate-image img {
+        transition: none
+    }
+}
+
+
+/* Single-page plates and references */
+.single-section {
+    scroll-margin-top: 90px
+}
+
+.plate-section {
+    background: #f7f9fd
+}
+
+.reference-section {
+    background: #fff
+}
+
+.section-lead {
+    color: #64748b;
+    max-width: 660px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    line-height: 1.75
+}
+
+.plate-upload-image {
+    position: relative;
+    overflow: hidden;
+    min-height: 240px
+}
+
+.plate-preview {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: contain;
+    background: #edf2f9
+}
+
+.plate-preview[hidden] {
+    display: none
+}
+
+.plate-file-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    overflow: hidden
+}
+
+.upload-label {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+    background: #2563eb;
+    color: white;
+    padding: .72rem 1.05rem;
+    border-radius: 12px;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: transform .25s, box-shadow .25s
+}
+
+.upload-label:hover,
+.upload-label:focus-within {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px #2563eb35
+}
+
+.plate-file-input:focus-visible+.remove-photo {
+    outline: 2px solid #2563eb
+}
+
+.remove-photo {
+    display: block;
+    background: transparent;
+    color: #b91c1c;
+    border: 0;
+    cursor: pointer;
+    margin-top: .75rem;
+    padding: .3rem 0;
+    font: inherit;
+    font-size: .9rem
+}
+
+.remove-photo[hidden] {
+    display: none
+}
+
+.plate-toolbar {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2.5rem
+}
+
+.plate-toolbar #plate-status {
+    font-size: .88rem;
+    color: #64748b
+}
+
+@media(max-width:600px) {
+    .plate-upload-image {
+        min-height: 220px
+    }
+
+    .plate-toolbar {
+        flex-direction: column
+    }
+}
+
+/* Six permanent coursework plate images */
+.plate-photo-link {
+    display: block;
+    cursor: zoom-in;
+    text-decoration: none
+}
+
+.plate-photo-link .plate-image {
+    position: relative
+}
+
+.plate-photo-link .plate-placeholder {
+    min-height: 240px;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem
+}
+
+.plate-card__info h3 {
+    font-size: 1.35rem;
+    color: #101828;
+    margin: .45rem 0
+}
+
+/* Reference links */
+.reference-body a {
+    color: #2563eb;
+    font-weight: 650;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: color .2s ease, transform .2s ease;
+    overflow-wrap: anywhere
+}
+
+.reference-body a:hover {
+    color: #1747a6;
+    transform: translateX(3px)
+}
+
+.reference-body h2 {
+    overflow-wrap: anywhere
+}
+
+/* Repeating scroll-reveal animation: visible items reset when leaving viewport. */
+@media(prefers-reduced-motion:reduce) {
+    .js-reveal .reveal-item {
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important
+    }
+}
